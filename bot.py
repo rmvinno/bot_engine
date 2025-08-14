@@ -103,8 +103,8 @@ def callback_handler(call):
     u.fwd(call.data)
     bot.delete_message(chat_id=u.id, message_id=call.message.message_id)
     bot.answer_callback_query(call.id, text="Данные сохранены")
-    bot.send_message(u.id, f"Выбрано {u.dlgFilter(
-        parent=call.data)}(id={call.data})")
+    bot.send_message(
+        u.id, f"Выбрано {u.dlgFilter(parent=call.data)}(id={call.data})")
     drawInlineDlg(call.message)
 
 
