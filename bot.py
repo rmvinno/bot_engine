@@ -91,7 +91,7 @@ def drawInlineDlg(message):
             log.info("handle_text (USER)")
             for admin in admins:
                 log.info(
-                    f"handle_text (USER): forwarding message to admin {admin}")
+                    f"handle_text (USER): forwarding message to admin {u._dlgs}")
                 bot.send_message(admin, u._dlgs)
 
 
